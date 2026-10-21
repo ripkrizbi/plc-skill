@@ -29,3 +29,13 @@ Use this file to choose the narrowest bundled reference area before relying on o
 - GX Works2 deeper project notes -> `references/vendors/mitsubishi/gxworks2-structured-project-deep-notes.md`
 - GX Works2 review patterns -> `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`
 - Mitsubishi official docs -> `references/vendors/mitsubishi/official-doc-index.md`
+
+## akYtec knowledge areas
+
+- vendor overview and evidence labels -> `references/vendors/akytec/akytec-overview.md`
+- ALP ST rules and ST-only versus whole-ALP limits -> `references/vendors/akytec/akytec-rules.md`
+- ALP ST cheatsheet -> `references/vendors/akytec/akytec-cheatsheet.md`
+- ALP pitfalls and cross-vendor contamination -> `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md`
+- ALP Modbus and network variables -> `references/vendors/akytec/akytec-modbus-and-network.md`
+- ALP persistence -> `references/vendors/akytec/akytec-persistence.md`
+- akYtec official docs -> `references/vendors/akytec/official-doc-index.md`

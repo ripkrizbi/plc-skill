@@ -1,0 +1,6 @@
+(* EXPECT: XV-02 *)
+PROGRAM PLC_PRG
+    VAR
+        xRun : BOOL;
+    END_VAR
+END_PROGRAM

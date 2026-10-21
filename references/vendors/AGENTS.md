@@ -14,7 +14,7 @@ Purpose: detect vendor/platform cues and load only the narrowest matching platfo
 
 - Mature: `mitsubishi/` for FX3U + GX Works2 + Structured Project + ST.
 - Targeted: `siemens/`, `rockwell/`, `omron/`.
-- Baseline: `beckhoff/`, `schneider/`, `codesys/`, `delta/`, `keyence/`, `panasonic/`.
+- Baseline: `beckhoff/`, `schneider/`, `codesys/`, `delta/`, `keyence/`, `panasonic/`, `akytec/`.
 
 ## Vendor File Roles
 

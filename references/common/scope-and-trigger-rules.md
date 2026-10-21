@@ -14,7 +14,7 @@ Prefer this skill when the request clearly involves one or more of:
 - Structured Text (ST), Ladder Diagram (LD), Function Block Diagram (FBD), or Sequential Function Chart (SFC)
 - code review, refactoring, maintainability review, or troubleshooting for PLC logic
 - IEC 61131-3 style controller software work
-- a known vendor ecosystem such as Mitsubishi, Siemens, Omron, Rockwell, Schneider, Delta, Keyence, Panasonic, Beckhoff, or Codesys
+- a known vendor ecosystem such as Mitsubishi, Siemens, Omron, Rockwell, Schneider, Delta, Keyence, Panasonic, akYtec, Beckhoff, or Codesys
 
 ## Strong positive examples
 

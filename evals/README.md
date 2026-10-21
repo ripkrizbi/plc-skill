@@ -12,6 +12,7 @@ Use this folder as a lightweight regression set for the skill.
 - `incomplete-input-cases.md`
 - `non-trigger-cases.md`
 - `routing-cases.md`
+- `akytec-cases.md`
 - `output-behavior-cases.md`
 - `trigger-queries.json`
 - `evals.json`

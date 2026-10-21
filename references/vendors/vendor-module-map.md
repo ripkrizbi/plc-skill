@@ -20,6 +20,7 @@ Use this file to discover the available vendor modules and their intended depth.
 - Panasonic -> `references/vendors/panasonic/`
 - Beckhoff -> `references/vendors/beckhoff/`
 - Codesys -> `references/vendors/codesys/`
+- akYtec -> `references/vendors/akytec/` (ALP 3.1, second-generation devices first; visualization not yet covered)
 
 ## Module rule
 

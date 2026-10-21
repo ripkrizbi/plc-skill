@@ -24,6 +24,21 @@
       "id": "T-SAFETY-BOUNDARY",
       "prompt": "Is this PLC interlock and reset logic enough to prove a safety door circuit is safe?",
       "expected_route": "common PLC safety downgrade"
+    },
+    {
+      "id": "T-AKYTEC-ALP-ST",
+      "prompt": "Write an ST function block for a PR205 in akYtec ALP using SYS.TON.",
+      "expected_route": "akYtec module"
+    },
+    {
+      "id": "T-AKYTEC-MODBUS",
+      "prompt": "How many registers can a PR205 Modbus master group into one request in ALP?",
+      "expected_route": "akYtec Modbus reference"
+    },
+    {
+      "id": "T-AKYTEC-PERSIST",
+      "prompt": "How do I keep a variable after power loss in akYtec ALP?",
+      "expected_route": "akYtec persistence reference"
     }
   ],
   "should_not_trigger": [
@@ -46,6 +61,11 @@
       "id": "NT-NETWORKING",
       "prompt": "Compare Profinet and Ethernet/IP market share at a high level.",
       "expected_route": "industrial networking discussion without control-program context"
+    },
+    {
+      "id": "N-AKYTEC-HW",
+      "prompt": "Which akYtec programmable relay has more digital outputs, for a purchase comparison?",
+      "expected_route": "no PLC programming workflow"
     }
   ]
 }

@@ -49,7 +49,7 @@ AI-generated PLC output.
 | --- | --- | --- |
 | Mature path | Mitsubishi FX3U + GX Works2 + Structured Project + ST | Deepest bundled guidance, examples, and review patterns. |
 | Targeted modules | Siemens, Rockwell / Allen-Bradley, Omron | Vendor routing, rules, examples, and focused eval coverage. |
-| Baseline modules | Beckhoff, Schneider, CODESYS, Delta, Keyence, Panasonic | Recognition, reference routing, cheatsheets, and official-doc indexes. |
+| Baseline modules | Beckhoff, Schneider, CODESYS, Delta, Keyence, Panasonic, akYtec (ALP 3.1, second-generation first) | Recognition, reference routing, cheatsheets, and official-doc indexes. |
 
 Do not assume every vendor path has the same depth. When a platform is unknown
 or only partially covered, the skill should answer from the common PLC layer and

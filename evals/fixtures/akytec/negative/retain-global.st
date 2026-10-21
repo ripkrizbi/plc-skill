@@ -1,0 +1,4 @@
+(* EXPECT: ST-05,ST-14 *)
+VAR_GLOBAL RETAIN
+    udiCount : UDINT;
+END_VAR

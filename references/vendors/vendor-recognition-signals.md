@@ -51,6 +51,12 @@ Use this file as a compact cue list for identifying vendor context from user wor
 
 - Panasonic, FPWIN, FP series
 
+## akYtec
+
+- akYtec, akYtec ALP, PR205, PR225, PR103, PR100, PR102, PR200, SMI200
+- `SYS.`-prefixed system blocks (`SYS.TON`, `SYS.BLINK`), `UDINT_TO_TIME`, `.fst` / `.fbst`
+- Ethernet / RS485 programmable relay with a graphic LCD in an ALP project context
+
 ## Beckhoff
 
 - Beckhoff, TwinCAT, ADS, task cycle in TwinCAT context

@@ -37,3 +37,6 @@ dist/
 *.bak
 *.swp
 
+
+# Manufacturer manuals are not redistributed in this repository
+*.pdf
