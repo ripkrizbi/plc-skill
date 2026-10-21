@@ -7,8 +7,8 @@ Use this module when the request is clearly about akYtec programmable relays pro
 Baseline vendor module. Primary target: **ALP 3.1 with second-generation devices, especially PR205**.
 It is not a mature module. Do not describe it as equivalent to the Mitsubishi path.
 
-Out of scope for this release: display/visualization/HMI programming (planned as a follow-up module),
-FBD library block details, macro internals, LoRa, akYtec Cloud, and any other akYtec product line.
+Display/visualization is covered for graphic-color-LCD devices in `akytec-visualization.md`; its open items are tied to bench protocols that have **not** been executed.
+Out of scope: the monochrome text LCD editor, FBD library block details, macro internals, LoRa, akYtec Cloud, and any other akYtec product line.
 
 ## Read Order
 
@@ -17,6 +17,7 @@ FBD library block details, macro internals, LoRa, akYtec Cloud, and any other ak
 3. Only when the request needs it:
    - `references/vendors/akytec/akytec-modbus-and-network.md`
    - `references/vendors/akytec/akytec-persistence.md`
+   - `references/vendors/akytec/akytec-visualization.md` (display/HMI, resource indicators) and `references/vendors/akytec/bench/README.md`
    - `references/vendors/akytec/akytec-mu210-modbus-note.md` (MU210 output-mask writes from an ALP master)
    - `references/vendors/akytec/akytec-cheatsheet.md`
    - `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md`

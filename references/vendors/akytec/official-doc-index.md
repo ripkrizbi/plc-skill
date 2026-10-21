@@ -36,6 +36,9 @@ Page numbers in this module are **printed** page numbers; a PDF viewer shows pri
 | FBD counters (state saving) | 7.2.4 | 152-155 |
 | ST functions / ST function block library entries | 7.4, 7.5 | 163-170 |
 | Cycle time | 8.2 | 214 |
+| Display manager, display programming (graphic color LCD) | 3.8, 4.4, 4.4.2 | 20-22, 39-51 |
+| Visualization simulation | 4.5.1 | 55-56 |
+| Display elements, per-element RAM table, graphic elements | 7.6, 7.7, 7.7.1-7.7.16 | 170-212 |
 | ST language | 12 (12.1-12.6) | 242-279 |
 
 ## PR205 UG Section Index (as cited)
@@ -43,6 +46,8 @@ Page numbers in this module are **printed** page numbers; a PDF viewer shows pri
 | Topic | Section | Printed page |
 | --- | --- | --- |
 | Specification tables (memory, network variables, logging flash) | 3.1 Table 3.2 | 9 |
+| Display type and resolution | 3.1 Table 3.3 | 10 |
+| Buttons and edit mode | 7.1 Table 7.1; 7.3 | 60, 63 |
 | Real-time clock and retain memory, battery | 7.12 | 69 |
 
 ## MU210 UG Section Index (as cited)
@@ -57,7 +62,7 @@ Page numbers in this module are **printed** page numbers; a PDF viewer shows pri
 
 ## Not Yet Indexed (Planned Follow-up)
 
-Display and visualization chapters (ALP UM §3.8, §4.4, §4.5.1, §7.6, §7.7), the FBD function and function-block library (§7.1-7.3), component manager and macro internals, LoRa and akYtec Cloud, PRM extension modules, and any hardware manual not listed above.
+The monochrome text LCD editor (ALP UM §4.4.1, §7.6), the FBD function and function-block library (§7.1-7.3), component manager and macro internals, LoRa and akYtec Cloud, PRM extension modules, and any hardware manual not listed above.
 
 ## Evidence Policy
 
