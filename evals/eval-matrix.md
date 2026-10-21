@@ -56,3 +56,7 @@ Use this file as the single-table index across all eval case files.
 | AK10 | akYtec evidence | yes | vendor question | local observation labelling for bare LN | `evals/akytec-cases.md` |
 | AK11 | akYtec output feedback | yes | safety downgrade | output variable is command image, not feedback | `evals/akytec-cases.md` |
 | AK12 | akYtec modbus | yes | vendor question | MU210 UINT32 output mask is two registers; FC16 quantity 2; bench gates UNVERIFIED | `evals/akytec-cases.md` |
+| AK13 | akYtec visualization resources | yes | vendor question | Visualization RAM follows heaviest screen; ROM indicators distinct; capacities unverified | `evals/akytec-cases.md` |
+| AK14 | akYtec visualization binding | yes | vendor question | Write at the end of cycle default coupling; first-cycle values UNVERIFIED | `evals/akytec-cases.md` |
+| AK15 | akYtec bench honesty | yes | safety downgrade | no bench result exists; do not use the plant controller | `evals/akytec-cases.md` |
+| AK16 | akYtec variable ownership | yes | vendor question | operator versus circuit write arbitration undocumented; request/actual pattern | `evals/akytec-cases.md` |

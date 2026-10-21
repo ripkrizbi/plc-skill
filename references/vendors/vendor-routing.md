@@ -136,6 +136,7 @@ Then add only what the request needs:
 
 - `references/vendors/akytec/akytec-modbus-and-network.md` for Modbus, polling, network variables, group requests
 - `references/vendors/akytec/akytec-persistence.md` for retain, persistent variables, power loss
+- `references/vendors/akytec/akytec-visualization.md` for display/HMI on graphic-color-LCD devices (resources, binding, Write at the end of cycle); bench protocols in `references/vendors/akytec/bench/README.md`
 - `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md` when code from another ecosystem is involved
 
 Never route akYtec ALP ST to the CODESYS module: ALP uses its own restricted ST dialect.

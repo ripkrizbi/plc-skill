@@ -39,6 +39,11 @@
       "id": "T-AKYTEC-PERSIST",
       "prompt": "How do I keep a variable after power loss in akYtec ALP?",
       "expected_route": "akYtec persistence reference"
+    },
+    {
+      "id": "T-AKYTEC-VIS",
+      "prompt": "Why is Visualization RAM nearly full on my PR205 ALP project with several screens?",
+      "expected_route": "akYtec visualization reference"
     }
   ],
   "should_not_trigger": [
