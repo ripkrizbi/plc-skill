@@ -37,5 +37,6 @@ Use this file to choose the narrowest bundled reference area before relying on o
 - ALP ST cheatsheet -> `references/vendors/akytec/akytec-cheatsheet.md`
 - ALP pitfalls and cross-vendor contamination -> `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md`
 - ALP Modbus and network variables -> `references/vendors/akytec/akytec-modbus-and-network.md`
+- MU210 output-mask write note -> `references/vendors/akytec/akytec-mu210-modbus-note.md`
 - ALP persistence -> `references/vendors/akytec/akytec-persistence.md`
 - akYtec official docs -> `references/vendors/akytec/official-doc-index.md`

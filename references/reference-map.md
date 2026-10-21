@@ -76,6 +76,7 @@ Use this file to choose the narrowest bundled reference area for a given questio
 - Beckhoff TwinCAT task architecture -> `references/vendors/beckhoff/twincat-task-architecture.md`
 - akYtec ALP rules and limits -> `references/vendors/akytec/akytec-rules.md`
 - akYtec ALP Modbus and network variables -> `references/vendors/akytec/akytec-modbus-and-network.md`
+- akYtec MU210 output-mask write note -> `references/vendors/akytec/akytec-mu210-modbus-note.md`
 - akYtec ALP persistence -> `references/vendors/akytec/akytec-persistence.md`
 - akYtec official documentation index -> `references/vendors/akytec/official-doc-index.md`
 - ST style and output guidance -> `references/common/st-style-guide.md`, `references/common/st-output-style.md`

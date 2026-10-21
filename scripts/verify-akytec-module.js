@@ -24,10 +24,11 @@ const requiredFiles = [
   'akytec-pitfalls-and-pro-tips.md',
   'akytec-modbus-and-network.md',
   'akytec-persistence.md',
+  'akytec-mu210-modbus-note.md',
   'official-doc-index.md',
 ];
 const labels = ['[DOC]', '[INFERRED]', '[LOCAL OBSERVATION / NOT INDEPENDENTLY VERIFIED]', '[UNVERIFIED]'];
-const ruleLinePattern = /^- \*\*((?:ENV|ST|MB|PS)-\d+)\*\*/;
+const ruleLinePattern = /^- \*\*((?:ENV|ST|MB|PS|MU)-\d+)\*\*/;
 const privatePattern = /\b(?:CLACK|Wilo|Daikin|PTDNC04|TECH77|clack-bms)\b/i;
 
 function record(message) {
@@ -94,7 +95,7 @@ function verifyRuleLines() {
   ];
   for (const filePath of referenceFiles) {
     if (!fs.existsSync(filePath)) continue;
-    for (const match of read(filePath).matchAll(/\b((?:ENV|ST|MB|PS)-\d+)\b/g)) {
+    for (const match of read(filePath).matchAll(/\b((?:ENV|ST|MB|PS|MU)-\d+)\b/g)) {
       if (!definedIds.has(match[1])) {
         record(`${rel(filePath)}: reference to undefined rule ${match[1]}`);
       }
@@ -195,15 +196,29 @@ function verifyRegistration() {
   const matrix = read(path.join(rootDir, 'evals', 'eval-matrix.md'));
   const evals = JSON.parse(read(path.join(rootDir, 'evals', 'evals.json')));
   const evalIds = new Set(evals.map((entry) => entry.id));
-  for (let n = 1; n <= 11; n += 1) {
+  for (let n = 1; n <= 12; n += 1) {
     const id = `AK${n}`;
     if (!new RegExp(`^\\|\\s*${id}\\s*\\|`, 'm').test(matrix)) record(`evals/eval-matrix.md: missing ${id}`);
     if (!evalIds.has(id)) record(`evals/evals.json: missing ${id}`);
   }
 }
 
+function verifyMu210MaskNote() {
+  const filePath = path.join(moduleDir, 'akytec-mu210-modbus-note.md');
+  if (!fs.existsSync(filePath)) return;
+  const text = read(filePath);
+  for (const needle of ['UINT32', 'two 16-bit Modbus registers', 'quantity 2', '0x01D6', 'function 06']) {
+    if (!text.includes(needle)) record(`${rel(filePath)}: must state "${needle}"`);
+  }
+  for (const id of ['MU-07', 'MU-08', 'MU-09', 'MU-10']) {
+    const line = text.split(/\r?\n/).find((l) => l.includes(`**${id}**`));
+    if (!line || !line.includes('[UNVERIFIED]')) record(`${rel(filePath)}: ${id} must stay [UNVERIFIED] until bench evidence exists`);
+  }
+}
+
 verifyFilesExist();
 verifyRuleLines();
+verifyMu210MaskNote();
 verifyModuleExamples();
 verifyFixtures();
 verifyNoManualOrPrivateContent();

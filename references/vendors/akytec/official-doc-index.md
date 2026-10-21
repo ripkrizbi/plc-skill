@@ -14,7 +14,7 @@ The manuals are **not** reproduced or bundled in this repository. Obtain them fr
 | --- | --- | --- |
 | ALP UM | `UM_akYtec_ALP_v3.1_3-EN-130795-2.4` (ALP 3.1 user manual, revision 2.4, 280 pages) | ST language, variables, persistence, Modbus configuration, execution model |
 | PR205 UG | `UG_PR205_3-EN-148069-1.5` (PR205 user guide, revision 1.5) | PR205 memory sizes, retain memory and battery |
-| MU210 UG | `UG_MU210-402_3-EN-47647-2.2` (MU210-402 user guide, revision 2.2) | One cited example of a slave-side FC16 length limit |
+| MU210 UG | `UG_MU210-402_3-EN-47647-2.2` (MU210-402 user guide, revision 2.2) | Slave-side facts in `akytec-mu210-modbus-note.md` (output mask, FC16 length) |
 
 Page numbers in this module are **printed** page numbers; a PDF viewer shows printed page + 1 for these documents.
 
@@ -49,6 +49,9 @@ Page numbers in this module are **printed** page numbers; a PDF viewer shows pri
 
 | Topic | Section | Printed page |
 | --- | --- | --- |
+| Digital output group, safe state | 4.7, 4.7.1 | 13 |
+| Output bitmask parameters and addresses | Appendix D, Table D.1 | 30 |
+| Modbus data types | Appendix D, Table D.2 | 31 |
 | Modbus functions table | Appendix D, Table D.3 | 31 |
 | Function-specific errors | Appendix D, Table D.5 | 32 |
 

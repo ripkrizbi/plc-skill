@@ -17,6 +17,7 @@ FBD library block details, macro internals, LoRa, akYtec Cloud, and any other ak
 3. Only when the request needs it:
    - `references/vendors/akytec/akytec-modbus-and-network.md`
    - `references/vendors/akytec/akytec-persistence.md`
+   - `references/vendors/akytec/akytec-mu210-modbus-note.md` (MU210 output-mask writes from an ALP master)
    - `references/vendors/akytec/akytec-cheatsheet.md`
    - `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md`
    - `references/vendors/akytec/official-doc-index.md`

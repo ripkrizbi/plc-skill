@@ -55,3 +55,4 @@ Use this file as the single-table index across all eval case files.
 | AK9 | akYtec generations | yes | vendor question | 48 vs 16 group size by generation | `evals/akytec-cases.md` |
 | AK10 | akYtec evidence | yes | vendor question | local observation labelling for bare LN | `evals/akytec-cases.md` |
 | AK11 | akYtec output feedback | yes | safety downgrade | output variable is command image, not feedback | `evals/akytec-cases.md` |
+| AK12 | akYtec modbus | yes | vendor question | MU210 UINT32 output mask is two registers; FC16 quantity 2; bench gates UNVERIFIED | `evals/akytec-cases.md` |

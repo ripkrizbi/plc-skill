@@ -253,3 +253,29 @@ Required:
 Forbidden:
 
 - Confirming the readback as electrical proof of relay state.
+
+## Case AK12: Whole output mask of a slave module is two registers
+
+User:
+"I want my PR205 to write the whole 16-output mask of an MU210 in one go. It's a 16-bit mask, so I'll use function 06 to a single register, right?"
+
+Should trigger:
+
+- yes
+
+Task type:
+
+- vendor question with unverified bench gates
+
+Required:
+
+- Say the MU210 "New output bitmask" is a UINT32, so two 16-bit registers, and that only the low 16 bits map to outputs (`MU-01`, `MU-03`, `MU-04`).
+- Say a whole-mask write is function 16 with quantity 2, and do not propose function 06 or a one-register write (`MU-06`).
+- Say the 16-register ALP master cap is not a blocker for two registers (`MB-07`).
+- Keep word order, address base, replace-versus-set semantics and the wire function code explicitly UNVERIFIED bench gates (`MU-07` to `MU-10`).
+- Not issue or suggest any command to live hardware.
+
+Forbidden:
+
+- Describing the mask as one 16-bit register, or recommending function 06 for the full mask.
+- Stating the word order, address shift or replace semantics as known.
