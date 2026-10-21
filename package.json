@@ -4,8 +4,8 @@
   "description": "Production-grade AI agent skill for industrial PLC programming with common engineering guidance and vendor-aware routing.",
   "scripts": {
     "postinstall": "echo \"\\n\\033[32mPlease run 'install-plc-skill --target claude-code' for Claude Code or 'install-plc-skill --target agents' for ~/.agents.\\033[0m\\n\"",
-    "verify": "node ./scripts/verify-repo.js",
-    "test": "node ./scripts/verify-repo.js"
+    "verify": "node ./scripts/verify-repo.js && node ./scripts/verify-akytec-module.js",
+    "test": "node ./scripts/verify-repo.js && node ./scripts/verify-akytec-module.js"
   },
   "bin": {
     "install-plc-skill": "./bin/install.js"

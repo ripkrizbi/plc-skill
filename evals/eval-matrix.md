@@ -44,4 +44,15 @@ Use this file as the single-table index across all eval case files.
 | SFC1 | sfc generation | yes | generation | 3-step sequence with N, S, R qualifiers | `evals/sfc-cases.md` |
 | SFC2 | sfc review | yes | review | Missing transition condition causing chart hang | `evals/sfc-cases.md` |
 | SFC3 | sfc explanation | yes | explanation | Difference between N and S action qualifiers | `evals/sfc-cases.md` |
-
+| AK1 | akYtec routing | yes | vendor generation | PR205 ALP ST routes to akYtec module; SYS.TON; UNCOMPILED label | `evals/akytec-cases.md` |
+| AK2 | akYtec unsupported constructs | yes | vendor generation | reject VAR_GLOBAL RETAIN, INT, STRING; circuit Persistence | `evals/akytec-cases.md` |
+| AK3 | akYtec unsupported constructs | yes | vendor generation | FB instance inside FUNCTION forbidden; nesting limit scope | `evals/akytec-cases.md` |
+| AK4 | akYtec persistence | yes | vendor generation | no RETAIN in ST FB; endurance undocumented | `evals/akytec-cases.md` |
+| AK5 | akYtec modbus | yes | vendor question | 16-register cap is master-side; FC16 split; slave limit from slave manual | `evals/akytec-cases.md` |
+| AK6 | akYtec contamination | yes | vendor migration | CODESYS to ALP: SYS. prefixes, no VAR_GLOBAL RETAIN/INT/R_TRIG | `evals/akytec-cases.md` |
+| AK7 | akYtec contamination | yes | vendor migration | Siemens addressing not valid in ALP ST | `evals/akytec-cases.md` |
+| AK8 | akYtec evidence | yes | safety downgrade | no compiler-verified claim; upload caution | `evals/akytec-cases.md` |
+| AK9 | akYtec generations | yes | vendor question | 48 vs 16 group size by generation | `evals/akytec-cases.md` |
+| AK10 | akYtec evidence | yes | vendor question | local observation labelling for bare LN | `evals/akytec-cases.md` |
+| AK11 | akYtec output feedback | yes | safety downgrade | output variable is command image, not feedback | `evals/akytec-cases.md` |
+| AK12 | akYtec modbus | yes | vendor question | MU210 UINT32 output mask is two registers; FC16 quantity 2; bench gates UNVERIFIED | `evals/akytec-cases.md` |

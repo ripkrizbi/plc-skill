@@ -119,6 +119,27 @@ Read:
 - `references/vendors/panasonic/panasonic-overview.md`
 - `references/vendors/panasonic/panasonic-rules.md`
 
+### akYtec
+
+Route to akYtec when cues include:
+
+- akYtec, akYtec ALP, ALP programming software
+- PR205, PR225, PR103, PR100, PR102, PR200, SMI200 programmable relays
+- `SYS.TON`, `SYS.BLINK`, `UDINT_TO_TIME`, `.fst` / `.fbst` exports in an ST context
+
+Read:
+
+- `references/vendors/akytec/akytec-overview.md`
+- `references/vendors/akytec/akytec-rules.md`
+
+Then add only what the request needs:
+
+- `references/vendors/akytec/akytec-modbus-and-network.md` for Modbus, polling, network variables, group requests
+- `references/vendors/akytec/akytec-persistence.md` for retain, persistent variables, power loss
+- `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md` when code from another ecosystem is involved
+
+Never route akYtec ALP ST to the CODESYS module: ALP uses its own restricted ST dialect.
+
 ### Beckhoff
 
 Route to Beckhoff when cues include:

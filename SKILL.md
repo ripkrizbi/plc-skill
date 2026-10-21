@@ -1,7 +1,7 @@
 ---
 name: plc-skill
 description: Vendor-aware PLC engineering skill for IEC 61131-3 logic design, review, debugging, refactoring, and documentation routing.
-when_to_use: Use for PLC programming questions involving ST, LD, FBD, SFC, state machines, sequences, alarms, interlocks, timers, counters, I/O mapping, scan-cycle behavior, or vendor-specific PLC environments such as Siemens, Rockwell, Mitsubishi, Omron, Beckhoff, Schneider, Delta, Keyence, Panasonic, or CODESYS. Do not use for generic electronics, wiring-only work, broad industrial networking, or final safety certification.
+when_to_use: Use for PLC programming questions involving ST, LD, FBD, SFC, state machines, sequences, alarms, interlocks, timers, counters, I/O mapping, scan-cycle behavior, or vendor-specific PLC environments such as Siemens, Rockwell, Mitsubishi, Omron, Beckhoff, Schneider, Delta, Keyence, Panasonic, akYtec (ALP), or CODESYS. Do not use for generic electronics, wiring-only work, broad industrial networking, or final safety certification.
 metadata:
   {
     "openclaw":
@@ -10,7 +10,7 @@ metadata:
       },
     "version": "1.0.0",
     "author": "OpenClaw Community",
-    "tags": ["plc", "iec61131-3", "st", "ladder", "sfc", "siemens", "rockwell", "mitsubishi", "omron", "codesys", "beckhoff", "schneider", "delta", "keyence", "panasonic"]
+    "tags": ["plc", "iec61131-3", "st", "ladder", "sfc", "siemens", "rockwell", "mitsubishi", "omron", "codesys", "beckhoff", "schneider", "delta", "keyence", "panasonic", "akytec"]
   }
 ---
 
@@ -126,6 +126,7 @@ Baseline routing/reference modules:
 - Delta
 - Keyence
 - Panasonic
+- akYtec (ALP 3.1; second-generation devices such as PR205 first)
 
 Do not assume every vendor path has the same depth, examples, or eval coverage.
 

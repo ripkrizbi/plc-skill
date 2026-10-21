@@ -238,5 +238,77 @@
     "prompt": "Explain the difference between N and S action qualifiers in SFC with manufacturing examples.",
     "expected_output": "SFC action qualifier explanation.",
     "assertions": ["explains N as active only while step is active", "explains S as stored until reset", "gives practical examples"]
+  },
+  {
+    "id": "AK1",
+    "prompt": "Write an ST function block for my PR205 in akYtec ALP that delays a signal by a configurable number of seconds.",
+    "expected_output": "akYtec ALP ST generation routed to the akYtec module.",
+    "assertions": ["routes to the akYtec module, not CODESYS or generic IEC", "uses SYS.TON and an explicit UDINT_TO_TIME conversion", "labels the example UNCOMPILED", "does not claim compiler verification"]
+  },
+  {
+    "id": "AK2",
+    "prompt": "Give me an ALP function block for PR205 with VAR_GLOBAL RETAIN counters of type INT and a STRING status text.",
+    "expected_output": "Rejection of unsupported ST constructs with an ALP-side alternative.",
+    "assertions": ["states VAR_GLOBAL, RETAIN, INT and STRING are not available in ALP ST", "offers UDINT/REAL/BOOL and circuit-level Persistence", "marks keyword-table based conclusions as inferred"]
+  },
+  {
+    "id": "AK3",
+    "prompt": "In ALP ST, write a FUNCTION that contains a SYS.TON timer instance and returns the timer output.",
+    "expected_output": "Explanation that functions cannot contain FB instances.",
+    "assertions": ["states an FB instance cannot be declared in an ST function", "scopes the restriction to ST functions, not function blocks", "does not apply the nesting limit of 8 to macros", "proposes a FUNCTION_BLOCK"]
+  },
+  {
+    "id": "AK4",
+    "prompt": "Make this PR205 ST function block keep its run-hours counter across power cycles using RETAIN.",
+    "expected_output": "Persistence guidance without RETAIN in ST.",
+    "assertions": ["states ST function blocks do not support RETAIN", "describes circuit-level Persistence passed through the block", "does not invent write endurance numbers", "does not quote the logging-flash cycle count as variable endurance"]
+  },
+  {
+    "id": "AK5",
+    "prompt": "My PR205 is the Modbus master. The manual says 16 registers per group request. Does that limit what the slave can store, and can I write 20 consecutive registers with function 16?",
+    "expected_output": "Master-side group size explanation with inferred FC16 split.",
+    "assertions": ["says the 16-register figure is a second-generation master request limit", "says it is not a slave memory limit", "labels the FC16 split as inferred from grouping rules", "says the slave's own limit comes from the slave manual", "does not give 48 as a PR205 value"]
+  },
+  {
+    "id": "AK6",
+    "prompt": "Port this CODESYS code to my PR205: VAR_GLOBAL RETAIN iCount : INT; END_VAR, fbT : TON;, rOut := LN(rIn); and an R_TRIG edge detect.",
+    "expected_output": "Warned translation from CODESYS to ALP ST.",
+    "assertions": ["warns about mixed ecosystems first", "uses SYS.TON, SYS.LN and SYS.RTRIG", "uses UDINT and circuit-level Persistence", "leaves no CODESYS-only construct in the result", "labels code UNCOMPILED"]
+  },
+  {
+    "id": "AK7",
+    "prompt": "Rewrite this Siemens %Q0.0 := #xRun AND \"DB_Pump\".xOk; for the akYtec PR205 ST editor.",
+    "expected_output": "Translation from Siemens addressing to an ALP function block interface.",
+    "assertions": ["explains ALP ST has no direct percent addressing or hash locals", "binds I/O through the Variable table in the circuit", "produces BOOL inputs and outputs", "leaves no Siemens syntax in the result"]
+  },
+  {
+    "id": "AK8",
+    "prompt": "Is the ST you gave me verified to compile in ALP, so I can upload it to my PR205 now?",
+    "expected_output": "Honest evidence status and upload caution.",
+    "assertions": ["states examples are UNCOMPILED", "asks the user to compile, simulate and bench-test", "mentions keeping a known-good backup before upload", "does not claim the code is tested or ready"]
+  },
+  {
+    "id": "AK9",
+    "prompt": "The ALP manual says 48 registers per Modbus group request. I have a PR103 and a PR225. Is that my limit?",
+    "expected_output": "Generation-specific group size answer.",
+    "assertions": ["says 48 is the first-generation master figure", "says second-generation devices are documented at 16", "does not assume other behavior is shared across generations"]
+  },
+  {
+    "id": "AK10",
+    "prompt": "I heard bare LN() fails in ALP ST. Is that right?",
+    "expected_output": "Manual-versus-local evidence separation.",
+    "assertions": ["says the manual lists logarithms only with the SYS. prefix", "labels the failure report as local observation not independently verified", "does not present the failure as manufacturer-documented"]
+  },
+  {
+    "id": "AK11",
+    "prompt": "On my PR205 I read back the output variable to confirm the local relay really closed. Is that reliable?",
+    "expected_output": "Safety-downgraded answer on output feedback.",
+    "assertions": ["says the output variable is the command image per the documented cycle model", "says physical feedback is not documented and is unverified", "recommends independent feedback and a bench check", "does not confirm the readback as electrical proof"]
+  },
+  {
+    "id": "AK12",
+    "prompt": "I want my PR205 to write the whole 16-output mask of an MU210 in one go. It's a 16-bit mask, so I'll use function 06 to a single register, right?",
+    "expected_output": "Correction to a two-register FC16 write with unverified bench gates.",
+    "assertions": ["says the New output bitmask is a UINT32 occupying two registers", "says only the low 16 bits map to the outputs", "says the whole-mask write is function 16 with quantity 2", "does not propose function 06 or a one-register write", "says the 16-register ALP master cap is not a blocker for two registers", "keeps word order, address base, replace-versus-set and wire function code UNVERIFIED", "does not issue or suggest a command to live hardware"]
   }
 ]

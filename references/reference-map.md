@@ -19,6 +19,17 @@ Use this file to choose the narrowest bundled reference area for a given questio
 - Beckhoff TwinCAT task architecture, OOP implementation, cyclic execution
   - `references/vendors/beckhoff/twincat-task-architecture.md`
 
+- akYtec ALP (PR205 and other second-generation devices) ST rules, types, declarations, limits
+  - `references/vendors/akytec/akytec-rules.md`
+  - `references/vendors/akytec/akytec-cheatsheet.md`
+  - `references/vendors/akytec/akytec-pitfalls-and-pro-tips.md`
+
+- akYtec ALP Modbus master/slave, polling, group request size, network variables
+  - `references/vendors/akytec/akytec-modbus-and-network.md`
+
+- akYtec ALP persistent variables, retain behavior, power-loss handling
+  - `references/vendors/akytec/akytec-persistence.md`
+
 - ST style, code shape, naming, or output structure
   - `references/common/st-style-guide.md`
   - `references/common/st-output-style.md`
@@ -63,6 +74,11 @@ Use this file to choose the narrowest bundled reference area for a given questio
 - Review and project-structure patterns -> `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`
 - Omron Sysmac project structure patterns -> `references/vendors/omron/sysmac-project-structure-patterns.md`
 - Beckhoff TwinCAT task architecture -> `references/vendors/beckhoff/twincat-task-architecture.md`
+- akYtec ALP rules and limits -> `references/vendors/akytec/akytec-rules.md`
+- akYtec ALP Modbus and network variables -> `references/vendors/akytec/akytec-modbus-and-network.md`
+- akYtec MU210 output-mask write note -> `references/vendors/akytec/akytec-mu210-modbus-note.md`
+- akYtec ALP persistence -> `references/vendors/akytec/akytec-persistence.md`
+- akYtec official documentation index -> `references/vendors/akytec/official-doc-index.md`
 - ST style and output guidance -> `references/common/st-style-guide.md`, `references/common/st-output-style.md`
 - Alarm, interlock, scan-cycle, and ownership patterns -> `references/common/alarm-and-interlock-patterns.md`, `references/common/scan-cycle-and-output-ownership.md`
 - Debug and review workflow stack -> `references/common/debugging-and-review.md`, `references/common/debugging-checklists.md`, `references/common/code-review-checklists.md`, `references/vendors/mitsubishi/gxworks2-project-review-patterns.md`

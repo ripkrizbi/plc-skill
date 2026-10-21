@@ -1,0 +1,4 @@
+(* EXPECT: XV-01 *)
+FUNCTION_BLOCK fbBad
+    %Q0.0 := #xRun AND "DB_Pump".xOk;
+END_FUNCTION_BLOCK

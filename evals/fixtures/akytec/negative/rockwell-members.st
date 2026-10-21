@@ -1,0 +1,4 @@
+(* EXPECT: XV-01 *)
+FUNCTION_BLOCK fbBad
+    xDone := TON1.DN;
+END_FUNCTION_BLOCK

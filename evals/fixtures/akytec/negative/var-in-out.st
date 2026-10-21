@@ -1,0 +1,6 @@
+(* EXPECT: ST-05 *)
+FUNCTION_BLOCK fbBad
+    VAR_IN_OUT
+        udiValue : UDINT;
+    END_VAR
+END_FUNCTION_BLOCK

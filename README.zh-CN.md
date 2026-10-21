@@ -41,7 +41,7 @@ PLC Skill 是一个可扩展知识库，面向 OpenClaw、Cursor、Claude Code �
 | --- | --- | --- |
 | 成熟路径 | Mitsubishi FX3U + GX Works2 + Structured Project + ST | 最完整的内置规则、示例和审查模式。 |
 | 定向模块 | Siemens、Rockwell / Allen-Bradley、Omron | 具备品牌路由、规则、示例和针对性 eval 覆盖。 |
-| 基础模块 | Beckhoff、Schneider、CODESYS、Delta、Keyence、Panasonic | 具备识别、参考路由、速查表和官方文档索引。 |
+| 基础模块 | Beckhoff、Schneider、CODESYS、Delta、Keyence、Panasonic、akYtec（ALP 3.1，优先第二代设备） | 具备识别、参考路由、速查表和官方文档索引。 |
 
 不要假设所有品牌路径都有相同深度。平台未知或覆盖不完整时，应先使用通用 PLC 层回答，
 并明确标出依赖品牌、型号或软件版本的细节。
