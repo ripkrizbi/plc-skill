@@ -9,7 +9,7 @@ Bench protocols that turn the open items below into evidence are in `references/
 
 ## Resources: ROM Versus RAM
 
-- **VZ-01** [DOC] On graphic-color-LCD devices the status bar has three separate visualization indicators: **System Visualization ROM** (available visualization ROM of the device, in percent), **User Visualization ROM** (available visualization ROM for bitmap images), and **Visualization RAM** (available visualization RAM, in percent, calculated for the **most heavily loaded screen**). Hovering shows absolute amounts. (ALP UM §3.7 pp.19-20)
+- **VZ-01** [DOC] On graphic-color-LCD devices the status bar has three separate visualization indicators: **System Visualization ROM** (available visualization ROM of the device, in percent), **User Visualization ROM** (available visualization ROM for bitmap images), and **Visualization RAM** (available visualization RAM, in percent, calculated for the **most heavily loaded screen**). Hovering shows absolute amounts. Whether a figure is free or used is unclear (`VZ-36`). (ALP UM §3.7 pp.19-20)
 - **VZ-02** [DOC] If any indicator overflows, writing the program to the device is disabled. ALP also warns when a resource reaches a critical value. (ALP UM §3.7 p.19-20)
 - **VZ-03** [INFERRED] Visualization RAM is not summed over screens: the indicator tracks the heaviest screen. Basis: the "most heavily loaded screen" wording (p.20). Whether inactive screens consume any other resource is [UNVERIFIED].
 - **VZ-04** [DOC] The manual publishes a per-element **Visualization RAM** cost table. Anchor values used by the bench protocols: empty screen 252 bytes; each physical-button entry is 80 bytes plus 20 per bound variable plus 10 per action plus a 10-byte reserve; a Text element 464 bytes; an INT/REAL input/output element 776 bytes; a variable binding adds 20 bytes; a visibility binding adds 20 bytes; enabling editing on an INT/REAL element adds 24 bytes; larger size and thicker frames increase the cost of several elements, with the frame effect capped at 2 px. (ALP UM §7.7 pp.176-181) Read the full table in the manual; it is not reproduced here.
@@ -19,6 +19,7 @@ Bench protocols that turn the open items below into evidence are in `references/
 - **VZ-08** [UNVERIFIED] Whether the visualization indicators appear when ALP is **offline** (no connected device). The manual lists the status-bar content "if the device is connected" (ALP UM §3.7 p.19). Bench gate `EXP-03`.
 - **VZ-09** [UNVERIFIED] How exactly the published per-element costs match what the ALP indicator reports, and the percentage granularity of the indicator.
 - **VZ-10** [DOC] A large number of data controls through the display increases the device cycle time. (ALP UM §8.2 p.214)
+- **VZ-36** [UNVERIFIED] Whether an indicator figure means **used** or **free** capacity. The manual says resource indicators show the used resource as a percentage of the total (ALP UM §3.7 p.19) but describes the visualization indicators as the available ROM/RAM as a percentage (pp.19-20). The per-element costs in the manual are used bytes (pp.176-181), so compare them with a **delta of used**, never with a raw displayed value. Bench gate `EXP-03` (direction test).
 
 ## Screens, Navigation and Structure
 

@@ -281,6 +281,34 @@ function verifyBenchProtocols() {
   }
 }
 
+function verifyBenchSpecifics() {
+  const exp03 = path.join(moduleDir, 'bench', 'exp-03-single-element-memory.md');
+  if (fs.existsSync(exp03)) {
+    const text = read(exp03);
+    for (const needle of ['Available (free) versus used', 'delta used', 'Direction test', 'verbatim', 'VZ-36']) {
+      if (!text.includes(needle)) record(`${rel(exp03)}: must state "${needle}"`);
+    }
+  }
+
+  const exp06 = path.join(moduleDir, 'bench', 'exp-06-shared-variable-ownership.md');
+  if (fs.existsSync(exp06)) {
+    const text = read(exp06);
+    for (const needle of [
+      'One project per variant', 'One binding per element', 'Participants',
+      'exp06_6e1', 'exp06_6e2', 'exp06_6e3', 'exp06_6e4',
+      'Allowed parameter: display Brightness only', 'Stop and escalate', 'D5 restoration', 'do not choose another parameter',
+    ]) {
+      if (!text.includes(needle)) record(`${rel(exp06)}: must state "${needle}"`);
+    }
+    // 6E must not reuse the 6A element or variable.
+    const sixE = text.split('### 6E')[1] || '';
+    const sixEBody = sixE.split('## Anticipated Results')[0];
+    if (/\bE1\b|s_shared/.test(sixEBody.replace(/no variable named `s_a`\/`s_shared`/g, ''))) {
+      record(`${rel(exp06)}: 6E variants must not reuse E1 or s_shared`);
+    }
+  }
+}
+
 function verifyVisualizationReference() {
   const filePath = path.join(moduleDir, 'akytec-visualization.md');
   if (!fs.existsSync(filePath)) return;
@@ -288,7 +316,7 @@ function verifyVisualizationReference() {
   for (const needle of ['System Visualization ROM', 'User Visualization ROM', 'Visualization RAM', 'Write at the end of cycle', 'most heavily loaded screen']) {
     if (!text.includes(needle)) record(`${rel(filePath)}: must cover "${needle}"`);
   }
-  for (const id of ['VZ-07', 'VZ-08', 'VZ-27', 'VZ-28']) {
+  for (const id of ['VZ-07', 'VZ-08', 'VZ-27', 'VZ-28', 'VZ-36']) {
     const line = text.split(/\r?\n/).find((l) => l.includes(`**${id}**`));
     if (!line || !line.includes('[UNVERIFIED]')) record(`${rel(filePath)}: ${id} must stay [UNVERIFIED] until bench evidence exists`);
   }
@@ -298,6 +326,7 @@ verifyFilesExist();
 verifyRuleLines();
 verifyMu210MaskNote();
 verifyBenchProtocols();
+verifyBenchSpecifics();
 verifyVisualizationReference();
 verifyModuleExamples();
 verifyFixtures();

@@ -19,6 +19,8 @@ experiment and records actual observations with evidence.** Nothing here may be 
    "Conclusion" field only after the fields are complete.
 5. **Compare against the anticipated column** but treat it as a hypothesis. A mismatch is a finding, not a failure.
 6. **One variable at a time.** Change one property between measurements and record the indicator after each change.
+7. **Free versus used.** Record each indicator's verbatim label and tooltip. Do not assume a figure is used or free until EXP-03 step 5a establishes the direction; compute costs as deltas of **used** (`VZ-36`).
+8. **Bound parameters are not assumed safe.** Binding a variable to a device parameter changes real device settings. Only the parameter named in a protocol may be bound, with a bounded value range and a written restoration procedure (EXP-06 6D). If that parameter cannot be bound or read, skip the step; do not substitute another parameter.
 
 ## Simulator Versus Standalone Device
 
@@ -44,7 +46,7 @@ experiment and records actual observations with evidence.** Nothing here may be 
 | EXP-03 | `exp-03-single-element-memory.md` | one element at a time: Visualization RAM, User and System Visualization ROM | yes (capacity); offline presence tested |
 | EXP-04 | `exp-04-multiple-screens.md` | RAM across several screens, jumps, buttons, boot screen | partly |
 | EXP-05 | `exp-05-status-indication.md` | Indicator, visibility, ranges, dynamic box, Modbus status indication | partly |
-| EXP-06 | `exp-06-shared-variable-ownership.md` | operator, circuit, parameter and network writers on one variable | partly |
+| EXP-06 | `exp-06-shared-variable-ownership.md` | operator, circuit, parameter and network writers, each in a separate project variant with defined participants and timings | partly |
 
 Suggested order: EXP-03, EXP-01, EXP-04, EXP-05, EXP-06, EXP-02 (persistence last, because it changes device storage).
 
